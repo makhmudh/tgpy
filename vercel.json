@@ -1,3 +1,9 @@
 {
-  "redirects": [{ "source": "/", "destination": "/api" }]
+  "version": 2,
+  "builds": [
+    { "src": "api/telegram.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/api/telegram", "dest": "/api/telegram.py" }
+  ]
 }
